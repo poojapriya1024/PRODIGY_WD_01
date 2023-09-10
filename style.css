@@ -84,3 +84,157 @@ header .nav-bar a:not(:last-child) {
     margin-bottom: 30px;
 
 }
+
+.content .info h2 span {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.content .info p {
+    font-size: 25px;
+    font-weight: 550;
+    margin-bottom: 40px;
+}
+
+.content .info .info-btn {
+    text-decoration: none;
+    color: black;
+    font-size: 27px;
+    font-weight: 150;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.9s;
+    transition-property: background;
+}
+
+.content .info-btn:hover {
+    background: #226a80;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a {
+    text-decoration: none;
+    position: relative;
+    color: black;
+    font-size:35px;
+    margin-right: 60px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+label {
+    display:none;
+}
+
+#checkbx {
+    z-index: 3;
+    display: none;
+}
+
+@media (max-width: 960px) {
+    header .nav-bar {
+        display: none;
+    }
+
+    label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.9s;
+        transition-property: color;
+    }
+
+    label:hover {
+        color: white;
+    }
+
+    label .bx-x {
+        display: none;
+    }
+
+    #checkbx:checked ~ header .nav-bar {
+        z-index: 2;
+        position: fixed;
+        background: rgba(114,223,255,0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #checkbx:checked ~ header .nav-bar a {
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #checkbx:checked ~ header label .bx-menu {
+        display: none;
+    }
+
+    #checkbx:checked ~ header label .bx-x {
+        z-index: 2;
+        display:block;
+        position:fixed;
+    }
+
+    label .bx-menu {
+        position: absolute;
+    }
+
+    header .logo {
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .content .info h2{
+        font-size:45px;
+        line-height:50px;
+    }
+
+    .content .info h2 span {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .content .info p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:560px) {
+
+    .content .info h2{
+        font-size:45px;
+        line-height:50px;
+    }
+
+    .content .info h2 span {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .content .info p {
+        font-size: 14px;
+    }
+}
+
+
